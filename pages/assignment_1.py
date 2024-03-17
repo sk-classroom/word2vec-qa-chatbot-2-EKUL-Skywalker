@@ -21,15 +21,15 @@ import numpy as np
 df = pd.read_csv("/workspaces/word2vec-qa-chatbot-2-EKUL-Skywalker/data/Question_Answer_Dataset_v1.2_S10.csv")
 
 # load question and answer vectors generated from pre-trained word2vec model
-ques_vector = np.load('data/vector.npz')
+ques_vector = np.load('/workspaces/word2vec-qa-chatbot-2-EKUL-Skywalker/data/vector.npz')
 ques_vec = ques_vector['x']
 
-ans_vector = np.load('data/ans_vector.npz')
+ans_vector = np.load('/workspaces/word2vec-qa-chatbot-2-EKUL-Skywalker/data/ans_vector.npz')
 ans_vec = ans_vector['x']
 
 # load th trained word2vec model 
 # Hint: You should use the word2vec model pre-trained with both question and answer sets.
-trained_w2v = gensim.models.Word2Vec.load("data/w2v.model")
+trained_w2v = gensim.models.Word2Vec.load("/workspaces/word2vec-qa-chatbot-2-EKUL-Skywalker/data/w2v.model")
 
 
 # App title
